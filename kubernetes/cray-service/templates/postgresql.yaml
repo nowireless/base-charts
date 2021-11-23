@@ -10,8 +10,9 @@ spec:
   secretName: "{{ include "cray-service.fullname" $root }}-postgres-tls"
   duration: 720h
   renewBefore: 24h
-  organizations:
-    - Cray
+  subject:
+    organizations:
+      - Cray
   commonName: "{{ include "cray-service.fullname" $root }}-postgres.{{ .Release.Namespace }}.cluster.svc"
   isCA: false
   privateKey:
