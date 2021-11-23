@@ -2,7 +2,7 @@
 {{- $root := . -}}
 {{- if .Values.sqlCluster.tls.enabled -}}
 ---
-apiVersion: cert-manager.io/v1alpha2
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: "{{ include "cray-service.fullname" $root }}-postgres-tls"
