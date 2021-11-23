@@ -14,9 +14,10 @@ spec:
     - Cray
   commonName: "{{ include "cray-service.fullname" $root }}-postgres.{{ .Release.Namespace }}.cluster.svc"
   isCA: false
-  keySize: 2048
-  keyAlgorithm: rsa
-  keyEncoding: pkcs1
+  privateKey:
+    size: 2048
+    algorithm: rsa
+    encoding: PKCS1
   usages:
     - server auth
     - client auth
