@@ -1,0 +1,48 @@
+apiVersion: v1
+entries:
+  cray-jobs:
+  - annotations:
+      artifacthub.io/license: MIT
+    apiVersion: v2
+    created: "2021-11-24T23:56:49.091167573Z"
+    description: This chart should never be installed directly, use it as a subchart in any chart that has related jobs it needs to run/maintain
+    digest: cf4fa07e5ca57a50ca54d28db265642d3227b7db083285dcf6aa673885077a84
+    home: https://github.com/Cray-HPE/base-charts
+    maintainers:
+    - name: bklei
+    - name: brantk-hpe
+    - name: kburns-hpe
+    name: cray-jobs
+    urls:
+    - https://github.com/nowireless/base-charts/releases/download/cray-jobs-1.0.0/cray-jobs-1.0.0.tgz
+    version: 1.0.0
+  cray-service:
+  - annotations:
+      artifacthub.io/images: |
+        - name: busybox
+          image: artifactory.algol60.net/csm-docker/stable/docker.io/library/busybox:1.28.0-glibc
+        - name: docker-kubectl
+          image: artifactory.algol60.net/csm-docker/stable/docker-kubectl:1.19.15
+        - name: coreos/etcd
+          image: artifactory.algol60.net/csm-docker/stable/quay.io/coreos/etcd:v3.3.22
+        - name: postgres
+          image: artifactory.algol60.net/csm-docker/stable/docker.io/library/postgres:13.2-alpine
+        - name: acid/pgbouncer
+          image: artifactory.algol60.net/csm-docker/stable/registry.opensource.zalan.do/acid/pgbouncer:master-17
+        - name: cray-postgres-db-backup
+          image: artifactory.algol60.net/csm-docker/stable/cray-postgres-db-backup:0.2.0
+      artifacthub.io/license: MIT
+    apiVersion: v2
+    created: "2021-11-24T23:56:49.206662695Z"
+    description: This chart should never be installed directly, base your specific Cray service charts off this one
+    digest: b229952c31e9db3d71199d0ac5c94091056fd45ab5c96ff8755122b0839697c3
+    home: https://github.com/Cray-HPE/base-charts
+    maintainers:
+    - name: bklei
+    - name: brantk-hpe
+    - name: kburns-hpe
+    name: cray-service
+    urls:
+    - https://github.com/nowireless/base-charts/releases/download/cray-service-8.0.3/cray-service-8.0.3.tgz
+    version: 8.0.3
+generated: "2021-11-24T23:56:48.939052291Z"
